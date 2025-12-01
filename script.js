@@ -10,7 +10,7 @@
 // })
 
 
-// building the UI  without ReactJS
+// building the UI  without React
 
 function render(children) {
     const app = document.getElementById("main")
