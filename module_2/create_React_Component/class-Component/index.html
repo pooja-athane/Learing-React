@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main"></div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <script type="text/babel">
+        class Greeting extends React.Componenet {
+            constructor(props) {
+                super(props)
+                this.state = {
+                    greeting: "hello"
+                }
+            }
+
+
+            render() {
+                return <h1>{this.state.greeting} ,{this.props.name}!</h1>
+            }
+        }
+        ReactDOM.render(<Greeting name="pooja" />, document.getElementById("main"))
+
+
+
+
+    </script>
+</body>
+
+</html>
