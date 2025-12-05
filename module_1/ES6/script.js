@@ -1,54 +1,54 @@
-// LET, VAR & CONST
+LET, VAR & CONST
 
-// if (true) {
-//     var x = 1
-//     let y = 2
-//     const z = 3
-//     console.log(x);
-//     console.log(y);
-//     console.log(z);
+if (true) {
+    var x = 1
+    let y = 2
+    const z = 3
+    console.log(x);
+    console.log(y);
+    console.log(z);
 
-// }
-// console.log(x);
-// console.log(y);
-// console.log(z);
+}
+console.log(x);
+console.log(y);
+console.log(z);
 
 
-// Arrow function
+Arrow function
 
-// const greetPersonOld = function (name) {
-//     return "hello" + name
-// }
+const greetPersonOld = function (name) {
+    return "hello" + name
+}
 
-// const greetPerson = name => 'hello' + name;
+const greetPerson = name => 'hello' + name;
 
-// console.log(greetPersonOld("pooja"));
-// console.log(greetPerson("pooja"));
+console.log(greetPersonOld("pooja"));
+console.log(greetPerson("pooja"));
 
-// Classes
+Classes
 
-// function SampleOld() {
-//     console.log("hey");
+function SampleOld() {
+    console.log("hey");
 
-// }
-// SampleOld.prototype.printHello = function () {
-//     console.log("hello");
+}
+SampleOld.prototype.printHello = function () {
+    console.log("hello");
 
-// }
-// const oldObject = new SampleOld();
-// oldObject.printHello();
-// class Sample {
-//     constructor() {
-//         console.log("hey pooja");
+}
+const oldObject = new SampleOld();
+oldObject.printHello();
+class Sample {
+    constructor() {
+        console.log("hey pooja");
 
-//     }
-//     printHello() {
-//         console.log("hello");
+    }
+    printHello() {
+        console.log("hello");
 
-//     }
-// }
-// const hello = new Sample();
-// hello.printHello();
+    }
+}
+const hello = new Sample();
+hello.printHello();
 
 // destructuring
 

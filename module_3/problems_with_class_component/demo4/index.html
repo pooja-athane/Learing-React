@@ -13,7 +13,26 @@
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
     <script type="text/babel">
-      
+        function useInterval({ initial, increment } = { initial:0, increment: 1000 }) {
+            const [seconds, setSeconds] = React.useState(initial)
+            React.useEffect(() => {
+                const timerId = setInterval(() => setSeconds(s = s + 1), increment || 1000)
+                return () => clearInterval(timerId)
+            }, [])
+            return seconds
+        }
+
+        function app() {
+            const first = useInterval();
+            const seconds = useInterval({ initial: 5 })
+            return <div>
+                <h1>{first}</h1>
+                <h1>{second}</h1>
+            </div>
+        }
+
+        ReactDOM.render(<app />, document.getElementById("main"))
+
     </script>
 </body>
 
