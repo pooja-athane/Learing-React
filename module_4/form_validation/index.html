@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <div id="main"></div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <script type="text/babel">
+
+        function Form() {
+            const [username, setUsername] = React.useState("")
+            const [password, setPassword] = React.useState("")
+
+            function handleSubmit(e) {
+                e.preventDefault()
+                // const request ={username, password
+                
+                // console.log(request);
+
+
+                // here we use trim for white spaces when we click on submit then wherever the white spaces are there then it gives me that error
+                if (username.trim() === "" || password.trim() === "") {
+                    console.error("Fields cannit be blank")
+                    return
+                }
+                console.log(username, password)
+
+            }
+            return (
+                <form onSubmit={handleSubmit}>
+                    <input type="text" placeholder="enter  username" value={username} onChange={e => setUsername(e.target.value)} /> <br />
+                    <input type="password" placeholder="enter  password" value={password} onChange={e => setPassword(e.target.value)} /> <br />
+                    <input type="submit" value="login" />
+                </form>
+            )
+        }
+        ReactDOM.render(<Form />, document.getElementById("main"))
+
+
+
+    </script>
+</body>
+
+</html>
